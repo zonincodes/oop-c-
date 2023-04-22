@@ -8,3 +8,7 @@ FetchContent_Declare(
 FetchContent_MakeAvailable(googletest)
 add_library(GTest::GTest INTERFACE IMPORTED)
 target_link_libraries(GTest::GTest INTERFACE gtest_main)
+
+add_executable(sample_test sample_test.cpp)
+target_link_libraries(sample_test GTest::GTest sample)
+add_test(sample_test sample_test)
