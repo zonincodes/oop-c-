@@ -1,0 +1,2 @@
+add_library(class_obj class_obj.cpp)
+target_include_directories(class_obj PUBLIC include)
