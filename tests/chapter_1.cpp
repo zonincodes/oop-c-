@@ -13,7 +13,21 @@ TEST(PrimeNumbers, Arithmetic)
     EXPECT_EQ((x%y), 2);
 }
 
+TEST(PrimeNumbers, Conditionals)
+{
+    string numbers{"4 2"};
+    istringstream ss{numbers};
 
+    int number, divisor;
+    bool is_a_divisor;
+    ss >> number;
+    ss >> divisor;
+
+    number / divisor ? is_a_divisor= true : is_a_divisor = false;
+    
+    EXPECT_TRUE(is_a_divisor);
+
+}
 
 int main(int argc, char** argv)
 {
